@@ -2,32 +2,32 @@
 
 ```mermaid
 flowchart TD
-    A[Start: Load Dataset] --> B[Data Understanding]
-    B --> B1[Show first few rows]
-    B --> B2[Identify input features & target]
+    A[Start - Load Dataset] --> B[Data Understanding]
+    B --> B1[Show initial rows]
+    B --> B2[Identify features and target]
     B --> B3[Check data types]
-    B --> B4[Handle missing values & duplicates]
+    B --> B4[Handle missing values and duplicates]
 
-    B4 --> C[Exploratory Data Analysis (EDA)]
-    C --> C1[Plot target variable distribution]
-    C --> C2[Visualize feature-target relationships]
-    C --> C3[Compare categorical features (if any)]
+    B4 --> C[EDA Process]
+    C --> C1[Plot target distribution]
+    C --> C2[Feature-target relationships]
+    C --> C3[Categorical feature comparisons]
     C --> C4[Correlation heatmap]
 
-    C4 --> D[Data Preprocessing]
-    D --> D1[Encode categorical variables]
-    D --> D2[Scale numerical features]
+    C4 --> D[Preprocessing]
+    D --> D1[Encode categorical data]
+    D --> D2[Scale numerical data]
     D --> D3[Impute missing values]
-    D --> D4[Train-test split]
+    D --> D4[Split train and test sets]
 
-    D4 --> E[Model Building]
-    E --> E1[Train Decision Tree Regressor]
-    E --> E2[Train Random Forest Regressor]
-    E --> E3[Train AdaBoost Regressor]
-    E --> E4[Train XGBoost Regressor]
-    E --> E5[Train CatBoost Regressor]
+    D4 --> E[Model Training]
+    E --> E1[Decision Tree Regressor]
+    E --> E2[Random Forest Regressor]
+    E --> E3[AdaBoost Regressor]
+    E --> E4[XGBoost Regressor]
+    E --> E5[CatBoost Regressor]
 
-    E1 --> F1[Evaluate using MAE, MSE, RMSE, R²]
+    E1 --> F1[Evaluate with MAE MSE RMSE R2]
     E2 --> F2
     E3 --> F3
     E4 --> F4
@@ -39,14 +39,14 @@ flowchart TD
     F4 --> G
     F5 --> G
 
-    G --> G1[Hyperparameter tuning (e.g. RF & XGB)]
-    G1 --> G2[Compare tuned vs default performance]
-    G2 --> G3[Discuss overfitting/underfitting]
+    G --> G1[Tune Random Forest and XGBoost]
+    G1 --> G2[Compare tuned vs default models]
+    G2 --> G3[Check overfitting or underfitting]
 
-    G3 --> H[Final Evaluation & Comparison]
-    H --> H1[Summary table of regressors]
-    H --> H2[Actual vs Predicted plots]
-    H --> H3[Feature importance plots]
+    G3 --> H[Final Evaluation]
+    H --> H1[Model comparison table]
+    H --> H2[Actual vs predicted plots]
+    H --> H3[Feature importance visualization]
 
     H3 --> I[End]
 
